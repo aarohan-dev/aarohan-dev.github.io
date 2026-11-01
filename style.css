@@ -1,20 +1,22 @@
 @font-face {
-      font-family: 'myFont';
-      src: url('fonts/trebuc.ttf');
-    }
-  .main-header {
-      position: sticky;   
-      top: 0;
-      z-index: 100;  
-      }
-  
-
-    body {
-      margin: 0;
-      font-family: 'myFont', sans-serif;
-      background-color: #f0e9e1;
-      color: #171412;
-    }
+font-family:'myFont';
+src:url('fonts/trebuc.ttf');
+}
+.main-header {
+position:sticky;
+top:0;
+z-index:100;
+width:100%;
+box-sizing:border-box;
+background-color:#f0e9e1;
+}
+body {
+margin:0;
+font-family:'myFont',sans-serif;
+background-color:#f0e9e1;
+color:#171412;
+overflow-x:hidden;
+}
     
 
 
