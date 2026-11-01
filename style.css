@@ -102,7 +102,6 @@
   left: 0;
   background: black;
 }
-/* Keeps the underline style permanently active for the page you are on */
 .link.active:after {
   width: 100%;
   left: 0;
@@ -298,7 +297,7 @@
   border-radius: 8px;
 }
 .section-logo3 {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   height: auto;
   flex-shrink: 0;
