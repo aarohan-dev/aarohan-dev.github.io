@@ -2,31 +2,27 @@
 font-family:'myFont';
 src:url('fonts/trebuc.ttf');
 }
-.main-header {
-position:fixed;
-top:0;
-left:0;
-right:0;
-z-index:100;
-background-color:#f0e9e1;
-}
-body {
-margin:0;
-padding-top:160px;
-font-family:'myFont',sans-serif;
-background-color:#f0e9e1;
-color:#171412;
-overflow-x:hidden;
-}
 .title-banner {
 padding:50px 20px;
 text-align:center;
 background-color:#171412;
+position:sticky;
+top:0;
+z-index:100;
+width:100%;
+box-sizing:border-box;
 }
 .title-banner1 {
 padding:50px 20px;
 text-align:center;
 background-color:#171412;
+}
+body {
+margin:0;
+font-family:'myFont',sans-serif;
+background-color:#f0e9e1;
+color:#171412;
+overflow-x:hidden;
 }
 h1 {
 margin:0;
@@ -215,9 +211,6 @@ width:100%;
 }
 .carousel-container img {
 height:260px;
-}
-body {
-padding-top:220px;
 }
 }
 footer {
