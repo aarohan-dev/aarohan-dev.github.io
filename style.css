@@ -6,6 +6,7 @@
     body {
       margin: 0;
       font-family: 'myFont', sans-serif;
+      background-color: #f0e9e1;
       color: #171412;
     }
     
@@ -24,9 +25,11 @@
 
     h1 {
       margin: 0;
-      font-family: 'myFont', sans-serif;
-      background-color: #f0e9e1;
-      color: #171412;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      line-height: 1.1;
+      color: orange;
+      -webkit-text-stroke: .5px #f0e9e1;
+      text-shadow: 2px 2px 0px #171412, 4px 4px 0px rgba(247, 140, 5, 0.3);
     }
 
     h2 {
