@@ -91,7 +91,7 @@
   display: block;
   margin-top: 0px;
   right: 0;
-  background: #fff;
+  background: #171412;
   transition: width .2s ease;
   -webkit-transition: width .2s ease;
   pointer-events: none; 
@@ -100,12 +100,12 @@
 .link:hover:after{
   width: 100%;
   left: 0;
-  background: black;
+  background: #171412;
 }
 .link.active:after {
   width: 100%;
   left: 0;
-  background: black;
+  background: #171412;
 }
 .link.active:hover:after {
   width: 0;
