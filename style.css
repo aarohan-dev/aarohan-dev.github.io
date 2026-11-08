@@ -10,9 +10,7 @@ body {
   color: #171412;
 }
 
-/* ==========================================================================
-   Typography & Headers
-   ========================================================================== */
+
 .title-banner {
   padding: 50px 20px;
   text-align: center;
@@ -69,9 +67,7 @@ h6 {
   font-size: 1.2rem;
 }
 
-/* ==========================================================================
-   Navigation Links
-   ========================================================================== */
+
 a:link {
   color: #171412;
   text-decoration: none;
@@ -118,9 +114,7 @@ a:hover {
   right: 0;
 }
 
-/* ==========================================================================
-   Animated Fire Backdrop
-   ========================================================================== */
+
 .fire-wrapper {
   position: relative;
   width: 100%;
@@ -373,7 +367,7 @@ a:hover {
 
 
 footer {
-  clear: both; /* Prevents floated columns above from crushing the footer structure */
+  clear: both; 
   background-color: #171412;
   color: #f0e9e1;
   text-align: center;
