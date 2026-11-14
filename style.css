@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: 'myFont', sans-serif;
   background-color: #f0e9e1;
-  color: #171412;
+  color: #000000;
 }
 
 
@@ -396,4 +396,19 @@ footer a:hover {
   height: 22px;
   vertical-align: middle;
   margin-left: 6px;
+}
+
+.fire-text {
+  background: linear-gradient(
+    to right,
+    #003cff,
+    #ff4500,
+    #ff8c00,
+    #ffd700,
+    #ffff00
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
