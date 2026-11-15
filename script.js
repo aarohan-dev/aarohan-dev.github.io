@@ -38,27 +38,32 @@ function showImage(index) {
   if (!frontImg || !backImg || isTransitioning) return;
 
   isTransitioning = true;
-
-  // 1. Set the background image to the target image
-  backImg.src = images[index];
-
-  // 2. Fade out front image to reveal the background
-  frontImg.style.opacity = "0";
-
-  setTimeout(function () {
-    // 3. Swap front image and instantly restore opacity
-    frontImg.style.transition = "none";
-    frontImg.src = images[index];
-    frontImg.style.opacity = "1";
-
-    // 4. Re-enable transitions for the subsequent slide
-    setTimeout(function () {
-      frontImg.style.transition = "opacity 0.8s ease-in-out";
-      isTransitioning = false;
-    }, 50);
-  }, 800);
-
   updateDots();
+
+  // Preload so the fade never reveals a half-loaded image
+  const loader = new Image();
+  let started = false;
+  function runTransition() {
+    if (started) return;
+    started = true;
+
+    backImg.src = images[index];
+    frontImg.style.opacity = "0";
+
+    setTimeout(function () {
+      frontImg.style.transition = "none";
+      frontImg.src = images[index];
+      frontImg.style.opacity = "1";
+
+      setTimeout(function () {
+        frontImg.style.transition = "opacity 0.8s ease-in-out";
+        isTransitioning = false;
+      }, 50);
+    }, 800);
+  }
+  loader.onload = runTransition;
+  loader.onerror = runTransition;
+  loader.src = images[index];
 }
 
 function resetTimer() {

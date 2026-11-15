@@ -16,11 +16,6 @@ body {
   text-align: center;
   background-color: #171412;
 }
-.title-banner1 {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #171412;
-}
 
 h1 {
   margin: 0;
@@ -55,10 +50,12 @@ h4 {
   margin-bottom: 0;
   font-size: 1.2rem;
 }
-h5 { 
-  color: #f0e9e1;
-  text-align: center;
-  word-spacing: 250%;
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 48px;
+  padding: 20px 16px;
   font-size: 1.2rem;
 }
 h6 { 
@@ -155,7 +152,7 @@ a:hover {
   overflow: hidden;
   border-radius: 8px;
   border-style: solid;
-  border-width: 2%;
+  border-width: 4px;
   border-color: orange;
 }
 
@@ -197,6 +194,7 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.55);
+  border: none;
   color: white;
   font-size: 1.8rem;
   line-height: 1;
@@ -295,6 +293,7 @@ a:hover {
   background-image: radial-gradient(rgb(247, 140, 5), rgb(235, 124, 26));
   border-radius: 6px;
   overflow: hidden;
+  color: #171412;
 }
 
 .card img {
@@ -372,7 +371,7 @@ a:hover {
   flex-shrink: 0;
   border-style: solid;
   border-color: orange;
-  border-width: 8%;
+  border-width: 4px;
   border-radius: 8px;
 }
 .section-logo2 {
@@ -382,7 +381,7 @@ a:hover {
   flex-shrink: 0;
   border-style: solid;
   border-color: orange;
-  border-width: 8%;
+  border-width: 4px;
   border-radius: 8px;
 }
 .section-logo3 {
@@ -392,7 +391,7 @@ a:hover {
   flex-shrink: 0;
   border-style: solid;
   border-color: orange;
-  border-width: 8%;
+  border-width: 4px;
   border-radius: 8px;
 }
 
@@ -406,14 +405,11 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .title-banner,
-  .title-banner1 {
+  .title-banner {
     padding: 30px 16px;
   }
-  h5 {
-    word-spacing: 0.6em;
-    line-height: 2;
-    padding: 0 10px;
+  .site-nav {
+    gap: 8px 24px;
     font-size: 1.05rem;
   }
   .section {
@@ -427,6 +423,35 @@ a:hover {
 
 iframe {
   max-width: 100%;
+  border: 0;
+}
+
+.section-heading {
+  color: #171412;
+  font-size: 2rem;
+}
+
+.achievements-list {
+  margin-left: 6%;
+  padding-left: 4%;
+  font-size: 1.1rem;
+  color: #171412;
+  list-style-type: '★ ';
+}
+
+.page-divider {
+  width: 92%;
+  margin: 30px auto;
+  border: 1px solid #171412;
+}
+
+.centered { text-align: center; }
+
+.external-links {
+  word-spacing: normal;
+  color: #171717;
+  text-align: center;
+  font-size: 1.6rem;
 }
 
 
@@ -447,7 +472,7 @@ footer p {
 footer a {
   color: #f0e9e1;
   text-decoration: underline;
-  margin: 0 10px;
+  margin: 0 4px;
   vertical-align: middle;
 }
 
@@ -459,22 +484,7 @@ footer a:hover {
   width: 22px;
   height: 22px;
   vertical-align: middle;
-  margin-left: 6px;
-}
-
-.fire-text {
-  background: linear-gradient(
-    to right,
-    #00b3ff,
-    #ff4500,
-    #ff8c00,
-    #ffd700,
-    #ffff00
-  );
-
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  margin: 0 6px;
 }
 
 .fire-text2 {

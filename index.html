@@ -3,69 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Photon Phoenix FTC</title>
-  <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
-
-
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>    
+  <title>Home – Photon Phoenix FTC</title>
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<main>
-
-  
-<!--NEW SECTION -->
-
-
   <header class="title-banner">
     <h1>PHOTON PHOENIX FTC</h1>
     <h2>"Blaze like a Phoenix, Shine like a Photon"</h2>
-  </header><body class="home-page-fire"></body>
-  <h5><a class="link active" href="index.html">Home</a> <a class="link" href="about-us.html">About Us</a> <a class="link" href="achievements.html">Achievements</a> <a class="link" href="contact-us.html">Contact Us</a> <a class="link" href="sponsors.html">Sponsors</a></h5>
-
-<!--NEW SECTION -->
-<div class="fire-wrapper fire">
-<section class="carousel-container">
-  <button type="button" class="carousel-btn prev" onclick="prevImage()" aria-label="Previous image">‹</button>
-  <div class="carousel-track">
-    <img id="bannerImageBack" src="assets/images/IMG_0383.jpg" alt="Photon Phoenix Team Showcase" class="carousel-slide">
-    <img id="bannerImageFront" src="assets/images/IMG_0383.jpg" alt="Photon Phoenix Team Showcase" class="carousel-slide">
+  </header>
+  <nav class="site-nav" aria-label="Main">
+    <a class="link active" href="index.html" aria-current="page">Home</a> <a class="link" href="about-us.html">About Us</a> <a class="link" href="achievements.html">Achievements</a> <a class="link" href="contact-us.html">Contact Us</a> <a class="link" href="sponsors.html">Sponsors</a>
+  </nav>
+<main>
+  <div class="fire-wrapper">
+    <section class="carousel-container" aria-label="Team photos">
+      <button type="button" class="carousel-btn prev" onclick="prevImage()" aria-label="Previous image">‹</button>
+      <div class="carousel-track">
+        <img id="bannerImageBack" src="assets/images/IMG_0383.jpg" alt="Photon Phoenix Team Showcase" class="carousel-slide">
+        <img id="bannerImageFront" src="assets/images/IMG_0383.jpg" alt="Photon Phoenix Team Showcase" class="carousel-slide">
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button type="button" class="carousel-btn next" onclick="nextImage()" aria-label="Next image">›</button>
+    </section>
   </div>
-   <div class="carousel-dots" id="carouselDots"></div>
-  <button type="button" class="carousel-btn next" onclick="nextImage()" aria-label="Next image">›</button>
-</div>
- 
-</section>
-<!--NEW SECTION -->
-    
-<h3 class="fire-text2">Our Robot</h3>
+
+  <h3 class="fire-text2">Our Robot</h3>
   <section class="section">
     <img src="assets/images/robot.png" alt="Our robot" class="section-logo">
     <p class="intro-text">
-Our robot is built from Gobilda and based on the Gobilda starter bot. It is built with an intake of a placeholder which intakes the balls before it is delivered to outtake which shoots the ball into the hive to score us points. It is built out of metal and power motor which allows our attachments such as our intake design and our wheels to move. It uses gears four the wheels to move and a chain for it to function the wheels for the gears. It has 6 wheels and rollers for the intake. It uses screws to attach everything together with the metal. Overall this robot uses our engineering and coding skills to design this robot and has a simple design to win the robot game.
+Our robot is built from goBILDA parts and based on the goBILDA Starter Bot. Its intake pulls in the balls and passes them to the outtake, which shoots them into the hive to score points. The frame is metal, and powerful motors drive our attachments, including the intake and the wheels. Gears and a chain connect the motors to the wheels. The robot has 6 wheels and uses rollers for the intake, and everything is held together with screws. Overall, this robot uses our engineering and coding skills and a simple design to win the robot game.
     </p>
   </section>
-
-
 </main>
 <footer>
-
-<p><strong>Photon Phoenix FTC — Team #32086</strong></p>
-
-<p>Blaze like a Phoenix, Shine like a Photon</p>
-
-<p>
-
-<a href = "contact-us.html" style="color: #f0e9e1; text-decoration: underline;">Contact Us</a> |<a href="https://www.youtube.com/@FTC_PhotonPhoenix"><img src="assets/images/youtube.png" alt="Youtube" style="width:1%;height:1%;"></a><a href="https://instagram.com"><img src="assets/images/instagram.png" alt="Instagram" style="width:1%;height:1%;"></a>
-
-</p>
-
-<p>&copy; 2026 Photon Phoenix. All rights reserved.</p>
-
+  <p><strong>Photon Phoenix FTC — Team #32086</strong></p>
+  <p>Blaze like a Phoenix, Shine like a Photon</p>
+  <p>
+    <a href="contact-us.html">Contact Us</a> |
+    <a href="https://www.youtube.com/@FTC_PhotonPhoenix"><img src="assets/images/youtube.png" alt="YouTube" class="social-icon"></a>
+    <a href="https://instagram.com"><img src="assets/images/instagram.png" alt="Instagram" class="social-icon"></a>
+  </p>
+  <p>&copy; 2026 Photon Phoenix. All rights reserved.</p>
 </footer>
-
-
-
 </body>
-
 </html>
