@@ -8,7 +8,6 @@ const images = [
 ];
 
 let currentIndex = 0;
-let autoRotateTimer = null;
 let isTransitioning = false;
 
 function createDots() {
@@ -66,14 +65,48 @@ function showImage(index) {
   loader.src = images[index];
 }
 
-function resetTimer() {
-  if (autoRotateTimer) {
-    clearInterval(autoRotateTimer);
+// Auto-rotation: a frame-based timer so the progress bar and the
+// rotation always agree, and so pausing keeps the elapsed time.
+const ROTATE_MS = 5000;
+let elapsed = 0;
+let lastFrame = null;
+let isPaused = false;
+
+function updateProgress() {
+  const fill = document.getElementById("carouselProgress");
+  if (fill) fill.style.transform = "scaleX(" + Math.min(elapsed / ROTATE_MS, 1) + ")";
+}
+
+function tick(now) {
+  if (lastFrame === null) lastFrame = now;
+  // Clamp so a background tab doesn't dump a huge time jump into the bar
+  const dt = Math.min(now - lastFrame, 100);
+  lastFrame = now;
+
+  if (!isPaused) {
+    elapsed = Math.min(elapsed + dt, ROTATE_MS);
+    // If a fade is still running, wait with a full bar until it finishes
+    if (elapsed >= ROTATE_MS && !isTransitioning) {
+      elapsed = 0;
+      nextImage(false);
+    }
+    updateProgress();
   }
-  // Restart the automatic 5-second interval
-  autoRotateTimer = setInterval(function () {
-    nextImage(false);
-  }, 5000);
+  requestAnimationFrame(tick);
+}
+
+function resetTimer() {
+  elapsed = 0;
+  updateProgress();
+}
+
+function toggleAutoRotate() {
+  isPaused = !isPaused;
+  const btn = document.getElementById("carouselToggle");
+  if (btn) {
+    btn.classList.toggle("paused", isPaused);
+    btn.setAttribute("aria-label", isPaused ? "Play slideshow" : "Pause slideshow");
+  }
 }
 
 function goToImage(index) {
@@ -102,4 +135,5 @@ function prevImage() {
 document.addEventListener("DOMContentLoaded", function () {
   createDots();
   resetTimer();
+  requestAnimationFrame(tick);
 });
